@@ -1,1 +1,14 @@
+import json
+from google.colab.patches import cv2_imshow
+from google.colab import files
+uploaded = files.upload()
+from google.colab import files
+uploaded = files.upload()
+import cv2
+import numpy as np
+with open('DJI_0249.json') as f:
+  data =json.load(f)
+image_name = data[2]['data']['image'] # Assuming 'image' is nested under a 'data' key within the dictionary.
+annotations = data[2]['annotations']
+img = cv2.imread('/content/DJI_0249.JPG')
 
