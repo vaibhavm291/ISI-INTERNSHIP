@@ -8,8 +8,8 @@ import cv2
 import numpy as np
 with open('DJI_0160.json') as f:
   data =json.load(f)
-image_name = data[7]['data']['image'] # Assuming 'image' is nested under a 'data' key within the dictionary.
-annotations = data[7]['annotations']
+image_name = data[13]['data']['image'] # Assuming 'image' is nested under a 'data' key within the dictionary.
+annotations = data[13]['annotations']
 img = cv2.imread('/content/DJI_0160.JPG')
 for ann in annotations:
   for res in ann['result']:
